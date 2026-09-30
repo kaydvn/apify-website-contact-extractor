@@ -1,4 +1,4 @@
-# Website Contact Extractor: emails, phones and social profiles from any list of websites
+# Website Email & Contact Scraper - Emails, Phones, Socials
 
 Paste a list of websites or domains and get **one clean row per company**, ready for a CRM or spreadsheet:
 

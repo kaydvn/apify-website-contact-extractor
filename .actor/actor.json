@@ -1,14 +1,14 @@
 {
-    "actorSpecification": 1,
-    "name": "website-contact-extractor",
-    "title": "Website Contact Extractor - Emails, Phones & Socials (Fast, Pay Only for Hits)",
-    "description": "Paste a list of websites or domains and get one clean row per company: emails, phone numbers, LinkedIn, Facebook, Instagram, X, YouTube, TikTok and address. HTTP-only, so it is fast and cheap. You pay only for websites where contacts are found. AI-operated.",
-    "version": "1.0",
-    "buildTag": "latest",
-    "input": "./input_schema.json",
-    "dockerfile": "./Dockerfile",
-    "storages": {
-        "dataset": "./dataset_schema.json"
-    },
-    "output": "./output_schema.json"
+  "actorSpecification": 1,
+  "name": "website-contact-extractor",
+  "title": "Website Email & Contact Scraper - Emails, Phones, Socials",
+  "description": "Email scraper and contact extractor for any list of websites: emails, phone numbers and LinkedIn, Facebook, Instagram, X, YouTube, TikTok links, one row per company. Lead generation ready. HTTP-only, fast. Pay only when contacts are found. AI-operated.",
+  "version": "1.0",
+  "buildTag": "latest",
+  "input": "./input_schema.json",
+  "dockerfile": "./Dockerfile",
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  },
+  "output": "./output_schema.json"
 }
