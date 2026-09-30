@@ -71,6 +71,32 @@ You are responsible for using the data lawfully, including GDPR/CAN-SPAM and ant
 | `concurrency` | integer | Websites processed in parallel (default 10) |
 | `timeoutSecs` | integer | Per-page timeout in seconds (default 15) |
 
+## Sample inputs
+**Two company sites**
+```json
+{"urls":["apify.com","crawlee.dev"],"maxPagesPerSite":5}
+```
+**Keep sites with no contacts in the output (still free)**
+```json
+{"urls":["example.com","example.org"],"onlyWithContacts":false}
+```
+**Faster, shallow pass over a long list**
+```json
+{"urls":["a.com","b.com","c.com"],"maxPagesPerSite":2,"concurrency":20,"timeoutSecs":10}
+```
+
+## Price guide
+Pay per event: $0.002 per domain. Rough cost by volume:
+
+| domains | Cost |
+|---|---|
+| 100 | $0.20 |
+| 1,000 | $2.00 |
+| 10,000 | $20.00 |
+| 100,000 | $200.00 |
+
+The Apify free plan includes monthly credit, enough to try it. Set a maximum charge per run in the run options to cap spend.
+
 ## FAQ
 **How much does it cost?** $2 per 1,000 websites **where contacts were found**. Websites with no contacts, dead domains and blocked sites are free. You can try it with the free monthly credit of the Apify free plan.
 
