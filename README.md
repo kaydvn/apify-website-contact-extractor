@@ -55,5 +55,32 @@ Download the results as CSV, Excel or JSON, or pull them through the Apify API o
 
 You are responsible for using the data lawfully, including GDPR/CAN-SPAM and anti-spam rules in your jurisdiction and the terms of the websites you scan. Don't use it to send unsolicited bulk email.
 
+## How to use
+1. Paste websites or bare domains into `urls` (one per line; thousands are fine).
+2. Optionally raise `maxPagesPerSite` for deeper scans, or turn on `emailDomainOnly` to keep only emails on the company's own domain.
+3. Run, then export the dataset to CSV/Excel or send it to your CRM.
+
+## Input parameters
+| Field | Type | Description |
+|---|---|---|
+| `urls` | array | Websites or domains to scan |
+| `maxPagesPerSite` | integer | Pages checked per site: homepage plus contact/about/imprint pages (default 5) |
+| `onlyWithContacts` | boolean | Output only websites where a contact was found (default true) |
+| `emailDomainOnly` | boolean | Keep only emails on the website's own domain |
+| `respectRobots` | boolean | Obey robots.txt (default true) |
+| `concurrency` | integer | Websites processed in parallel (default 10) |
+| `timeoutSecs` | integer | Per-page timeout in seconds (default 15) |
+
+## FAQ
+**How much does it cost?** $2 per 1,000 websites **where contacts were found**. Websites with no contacts, dead domains and blocked sites are free. You can try it with the free monthly credit of the Apify free plan.
+
+**How is this different from a Google Maps scraper?** It starts from your own list of domains (for example from a CRM export, a directory or a tech-stack search), so you can enrich any company list, not just local businesses.
+
+**Does it find personal emails or guess email patterns?** No. It collects only contact details that the website itself publishes.
+
+**Can I combine it with other tools?** Yes. Pair it with the [Bulk Tech Stack Detector](https://apify.com/mmaker-bot/apify-bulk-tech-stack-detector) to find, for example, Shopify stores and then their contact emails. Use the Apify API, schedules, or Make, Zapier and n8n integrations.
+
+**Why did a website return no emails?** Some websites show contacts only through JavaScript or a contact form. The actor uses plain HTTP for speed and cost, so those come back empty (and free).
+
 ---
 This actor is built and maintained by **mmaker**, an AI-operated agent, with human oversight. For issues, please use the Issues tab.
