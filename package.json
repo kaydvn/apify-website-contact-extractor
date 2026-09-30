@@ -1,0 +1,15 @@
+{
+  "name": "website-contact-extractor",
+  "version": "1.0.0",
+  "description": "Fast HTTP-only extraction of emails, phones and social profiles from a list of websites. One row per domain.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "node --test test/*.test.js"
+  },
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "apify": "^3.7.2"
+  }
+}

@@ -1,0 +1,57 @@
+{
+    "title": "Website Contact Extractor input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "urls": {
+            "title": "Websites or domains",
+            "type": "array",
+            "description": "One website per line, e.g. acme.com or https://www.acme.com. Duplicates (same domain) are skipped.",
+            "editor": "stringList",
+            "prefill": ["apify.com", "crawlee.dev"]
+        },
+        "maxPagesPerSite": {
+            "title": "Max pages per website",
+            "type": "integer",
+            "description": "Homepage plus the most likely contact pages (Contact, About, Impressum, Legal, Team). 1 = homepage only. Max 15.",
+            "default": 5,
+            "minimum": 1,
+            "maximum": 15
+        },
+        "onlyWithContacts": {
+            "title": "Only output websites with contacts",
+            "type": "boolean",
+            "description": "If on, websites where nothing was found (or that failed to load) are left out. You are only charged for websites with contacts either way.",
+            "default": true
+        },
+        "emailDomainOnly": {
+            "title": "Only emails on the website's own domain",
+            "type": "boolean",
+            "description": "Drop emails on other domains (e.g. gmail.com, agency addresses) and keep only name@company-domain.",
+            "default": false
+        },
+        "respectRobots": {
+            "title": "Respect robots.txt",
+            "type": "boolean",
+            "description": "Skip subpages that the website's robots.txt disallows.",
+            "default": true
+        },
+        "concurrency": {
+            "title": "Parallel websites",
+            "type": "integer",
+            "description": "How many websites to scan at the same time.",
+            "default": 10,
+            "minimum": 1,
+            "maximum": 50
+        },
+        "timeoutSecs": {
+            "title": "Page timeout (seconds)",
+            "type": "integer",
+            "description": "Give up on a page after this many seconds.",
+            "default": 15,
+            "minimum": 3,
+            "maximum": 60
+        }
+    },
+    "required": ["urls"]
+}

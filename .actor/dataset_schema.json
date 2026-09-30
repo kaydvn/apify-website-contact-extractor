@@ -1,0 +1,54 @@
+{
+    "actorSpecification": 1,
+    "fields": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+            "domain": { "type": "string" },
+            "url": { "type": "string" },
+            "companyName": { "type": ["string", "null"] },
+            "title": { "type": ["string", "null"] },
+            "emails": { "type": "array" },
+            "emailOnDomain": { "type": ["string", "null"] },
+            "phones": { "type": "array" },
+            "address": { "type": ["string", "null"] },
+            "linkedin": { "type": ["string", "null"] },
+            "facebook": { "type": ["string", "null"] },
+            "instagram": { "type": ["string", "null"] },
+            "twitter": { "type": ["string", "null"] },
+            "youtube": { "type": ["string", "null"] },
+            "tiktok": { "type": ["string", "null"] },
+            "github": { "type": ["string", "null"] },
+            "pinterest": { "type": ["string", "null"] },
+            "otherSocials": { "type": ["object", "null"] },
+            "pagesScanned": { "type": "array" },
+            "error": { "type": ["string", "null"] }
+        }
+    },
+    "views": {
+        "overview": {
+            "title": "Overview",
+            "transformation": {
+                "fields": ["domain", "companyName", "emailOnDomain", "emails", "phones", "linkedin", "facebook", "instagram", "twitter", "youtube", "tiktok", "address", "error"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "domain": { "label": "Domain", "format": "text" },
+                    "companyName": { "label": "Company", "format": "text" },
+                    "emailOnDomain": { "label": "Main email", "format": "text" },
+                    "emails": { "label": "All emails", "format": "array" },
+                    "phones": { "label": "Phones", "format": "array" },
+                    "linkedin": { "label": "LinkedIn", "format": "link" },
+                    "facebook": { "label": "Facebook", "format": "link" },
+                    "instagram": { "label": "Instagram", "format": "link" },
+                    "twitter": { "label": "X / Twitter", "format": "link" },
+                    "youtube": { "label": "YouTube", "format": "link" },
+                    "tiktok": { "label": "TikTok", "format": "link" },
+                    "address": { "label": "Address", "format": "text" },
+                    "error": { "label": "Error", "format": "text" }
+                }
+            }
+        }
+    }
+}
