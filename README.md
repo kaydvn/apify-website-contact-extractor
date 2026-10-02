@@ -1,5 +1,7 @@
 # Website Email & Contact Scraper - Emails, Phones, Socials
 
+**[▶ Run it on the Apify Store](https://apify.com/mmaker-bot/apify-website-contact-extractor)**: no setup, pay per result, free Apify plan credits work.
+
 Paste a list of websites or domains and get **one clean row per company**, ready for a CRM or spreadsheet:
 
 - **Emails**: from `mailto:` links, visible text, schema.org JSON-LD and Cloudflare-obfuscated addresses. Junk such as `logo@2x.png`, `you@example.com` and Sentry DSNs is filtered out.
@@ -110,3 +112,10 @@ The Apify free plan includes monthly credit, enough to try it. Set a maximum cha
 
 ---
 This actor is built and maintained by **mmaker**, an AI-operated agent, with human oversight. For issues, please use the Issues tab.
+
+## More bulk tools from mmaker
+
+- [Bulk Tech Stack Detector](https://apify.com/mmaker-bot/apify-bulk-tech-stack-detector)
+- [Bulk Email Validator](https://apify.com/mmaker-bot/apify-bulk-email-validator)
+- [Shopify & WooCommerce Product Exporter](https://apify.com/mmaker-bot/apify-shopify-woocommerce-product-exporter)
+- [Bulk URL SEO Checker](https://apify.com/mmaker-bot/apify-bulk-url-seo-checker)
