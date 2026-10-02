@@ -87,8 +87,8 @@ You are responsible for using the data lawfully, including GDPR/CAN-SPAM and ant
 {"urls":["a.com","b.com","c.com"],"maxPagesPerSite":2,"concurrency":20,"timeoutSecs":10}
 ```
 
-## Price guide
-Pay per event: $0.002 per domain. Rough cost by volume:
+## Pricing
+Pay per event: the `domain` event costs $0.002 per website where at least one contact was found (that is $2.00 per 1,000 domains). Websites with no contacts, dead domains and blocked sites are not charged. Rough cost by volume:
 
 | domains | Cost |
 |---|---|
